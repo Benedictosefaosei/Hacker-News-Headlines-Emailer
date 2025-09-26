@@ -37,4 +37,16 @@ div = body.find("div")
 ##searching specific stings in our find/find_all calls
 import re
 head = soup.find_all("h2", string=re.compile("Hackers"))
-print(head)
+# print(head)
+
+#Using the select
+soup_select = soup.select("p")
+
+#Using the find method to get only the strings without the keyword by using string
+ss = soup.find('p')
+# print(ss.string)
+
+
+#Using the find method to get all the strings without the keyword by using get_text()
+ssa = soup.find('div')
+print(ssa.get_text())
